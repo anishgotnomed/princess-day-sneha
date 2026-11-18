@@ -16,7 +16,7 @@ Drop these files into the `images/` folder (any of `.jpg`, `.png`, `.jpeg`, `.we
 | File | Where it shows |
 |------|----------------|
 | `pic1.jpg` | Big round hero photo on the Home page |
-| `pic2.jpg` … `pic8.jpg` | The Gallery grid |
+| `pic2.jpg` … `pic5.jpg` | The Gallery grid |
 
 Until a file exists, its slot shows a labelled placeholder — the layout still looks fine.
 
@@ -32,10 +32,6 @@ Until a file exists, its slot shows a labelled placeholder — the layout still 
 3. Repo **Settings → Pages** → "Build and deployment" →
    **Source: Deploy from a branch** → branch `main`, folder `/ (root)` → **Save**.
 4. In ~1 minute it's live at:
-
-   ```
-   https://YOUR-USERNAME.github.io/princess-day-sneha/
-   ```
 
 ## Deploy with git (if you already have a repo)
 ```bash

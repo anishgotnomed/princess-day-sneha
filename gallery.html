@@ -42,17 +42,14 @@
   <script>
     // Gallery captions live here — edit these with your own words.
     const CAPTIONS = {
-      2: 'Queen energy, always',
-      3: 'My favourite smile',
-      4: 'Golden girl',
-      5: 'Princess in pink',
-      6: 'Sunshine in human form',
-      7: 'Pretty when you laugh',
-      8: 'My whole heart'
+      2: 'My favourite smile',
+      3: 'Golden girl',
+      4: 'Princess in pink',
+      5: 'Sunshine'
     };
     (function buildGallery() {
       const grid = document.getElementById('grid');
-      for (let i = 2; i <= 8; i++) {
+      for (let i = 2; i <= 5; i++) {
         const item = document.createElement('div');
         item.className = 'g-item';
         const img = document.createElement('img');
