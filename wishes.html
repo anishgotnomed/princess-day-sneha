@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wishes — Sneha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="float-field"></div>
+
+  <nav>
+    <span class="brand">Sneha &hearts;</span>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="story.html">Story</a>
+    <a href="wishes.html">Wishes</a>
+    <a href="surprise.html">Surprise</a>
+  </nav>
+
+  <main>
+    <section class="page">
+      <h1 class="title">Wishes for My Princess</h1>
+      <p class="subtitle">Hover the cards — each one hides a wish for you &#127873;</p>
+
+      <div class="wish-grid" id="wishes">
+        <!-- cards built by script.js below -->
+      </div>
+
+      <div style="margin-top:2rem;">
+        <a class="btn" href="story.html">&#128141; Our Story</a>
+        <a class="btn gold" href="surprise.html">&#127881; Surprise</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>Made with &#10084; for Sneha &bull; Happy Princess Day</footer>
+
+  <script>
+    // Wishes: the front is an emoji, the back is your message. Edit freely.
+    const WISHES = [
+      { emoji: '\uD83D\uDC51', front: 'A Crown',     back: 'You rule every room you walk into. Today you wear it out loud.' },
+      { emoji: '\uD83D\uDC96', front: 'Endless Love', back: 'No matter what day it is, you are loved — today especially.' },
+      { emoji: '\u2728', front: 'Magic',      back: 'May today sparkle the way you make ordinary days sparkle.' },
+      { emoji: '\uD83C\uDF89', front: 'Joy',        back: 'Laugh loud, smile wide, take a thousand pictures.' },
+      { emoji: '\uD83D\uDCAB', front: 'Dreams',      back: 'Every dream you have, I will cheer for. Chase them all.' },
+      { emoji: '\uD83C\uDF38', front: 'Happiness',   back: 'You deserve the whole garden, not just one flower.' }
+    ];
+    (function buildWishes() {
+      const grid = document.getElementById('wishes');
+      WISHES.forEach(w => {
+        const flip = document.createElement('div');
+        flip.className = 'flip';
+        const inner = document.createElement('div');
+        inner.className = 'flip-inner';
+        const front = document.createElement('div');
+        front.className = 'flip-face flip-front';
+        const emoji = document.createElement('span');
+        emoji.className = 'emoji';
+        emoji.textContent = w.emoji;
+        const fText = document.createElement('span');
+        fText.textContent = w.front;
+        front.appendChild(emoji); front.appendChild(fText);
+        const back = document.createElement('div');
+        back.className = 'flip-face flip-back';
+        back.textContent = w.back;
+        inner.appendChild(front); inner.appendChild(back);
+        flip.appendChild(inner);
+        grid.appendChild(flip);
+      });
+    })();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

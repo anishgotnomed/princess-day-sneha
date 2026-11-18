@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Sneha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="float-field"></div>
+
+  <nav>
+    <span class="brand">Sneha &hearts;</span>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="story.html">Our Story</a>
+    <a href="wishes.html">Wishes</a>
+    <a href="surprise.html">Surprise</a>
+  </nav>
+
+  <main>
+    <section class="page">
+      <h1 class="title">Her Royal Gallery</h1>
+      <p class="subtitle">Every picture of you is a masterpiece &#128248;&#10024;</p>
+
+      <div class="gallery-grid" id="grid">
+        <!-- pics 2..8 fill in from script.js -->
+      </div>
+
+      <div style="margin-top:2rem;">
+        <a class="btn" href="story.html">&#128141; Our Story</a>
+        <a class="btn gold" href="surprise.html">&#127881; Surprise</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>Made with &#10084; for Sneha &bull; Happy Princess Day</footer>
+
+  <script>
+    // Gallery captions live here — edit these with your own words.
+    const CAPTIONS = {
+      2: 'Queen energy, always',
+      3: 'My favourite smile',
+      4: 'Golden girl',
+      5: 'Princess in pink',
+      6: 'Sunshine in human form',
+      7: 'Pretty when you laugh',
+      8: 'My whole heart'
+    };
+    (function buildGallery() {
+      const grid = document.getElementById('grid');
+      for (let i = 2; i <= 8; i++) {
+        const item = document.createElement('div');
+        item.className = 'g-item';
+        const img = document.createElement('img');
+        img.src = 'images/pic' + i + '.jpg';
+        img.alt = 'Sneha photo ' + i;
+        img.dataset.pic = i;
+        img.onerror = function () { window.fixPhoto(this); };
+        const cap = document.createElement('div');
+        cap.className = 'cap';
+        cap.textContent = CAPTIONS[i] || 'Pretty as always';
+        item.appendChild(img);
+        item.appendChild(cap);
+        grid.appendChild(item);
+      }
+    })();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
