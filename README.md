@@ -16,7 +16,7 @@ Drop these files into the `images/` folder (any of `.jpg`, `.png`, `.jpeg`, `.we
 | File | Where it shows |
 |------|----------------|
 | `pic1.jpg` | Big round hero photo on the Home page |
-| `pic2.jpg` … `pic5.jpg` | The Gallery grid |
+| `pic2.jpg` … `pic7.jpg` | The Gallery grid |
 
 Until a file exists, its slot shows a labelled placeholder — the layout still looks fine.
 
