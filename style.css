@@ -304,12 +304,20 @@ h1.title {
   position: absolute;
   top: -22px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(-10px);
   font-size: clamp(2.4rem, 9vw, 4.2rem);
   display: inline-block;
   filter: drop-shadow(0 6px 12px rgba(255, 209, 102, 0.7));
-  animation: crownBob 3s ease-in-out infinite;
   z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s ease, transform .5s ease, visibility .5s;
+}
+.crown-on-photo.shown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  animation: crownBob 3s ease-in-out infinite;
 }
 
 /* ---------- surprise ---------- */

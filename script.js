@@ -73,11 +73,9 @@ window.fireConfetti = fireConfetti;
   btn.addEventListener('click', () => {
     if (done) return;
     done = true;
-    const crown = document.createElement('div');
-    crown.className = 'crowned';
-    crown.textContent = '\uD83D\uDC51';
-    crown.style.fontSize = '4rem';
-    target.insertBefore(crown, target.firstChild);
+    // Reveal the crown that sits on the photo (it's hidden until clicked).
+    const crown = target.querySelector('.crown-on-photo');
+    if (crown) crown.classList.add('shown');
     const msg = document.getElementById('crownMsg');
     if (msg) { msg.style.display = 'block'; msg.style.animation = 'slideIn .8s ease both'; }
     fireConfetti();
