@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Gallery — Sneha</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,12 +13,16 @@
   <div class="float-field"></div>
 
   <nav>
-    <span class="brand">Sneha &hearts;</span>
-    <a href="index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="story.html">Our Story</a>
-    <a href="wishes.html">Wishes</a>
-    <a href="surprise.html">Surprise</a>
+    <span class="brand">Sneha ❤️</span>
+    <div class="nav-row">
+      <a href="index.html">Home</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="story.html">Our Story</a>
+    </div>
+    <div class="nav-row">
+      <a href="wishes.html">Wishes</a>
+      <a href="surprise.html">Surprise</a>
+    </div>
   </nav>
 
   <main>
@@ -27,12 +31,7 @@
       <p class="subtitle">Every picture of you is a masterpiece &#128248;&#10024;</p>
 
       <div class="gallery-grid" id="grid">
-        <!-- pics 2..8 fill in from script.js -->
-      </div>
-
-      <div style="margin-top:2rem;">
-        <a class="btn" href="story.html">&#128141; Our Story</a>
-        <a class="btn gold" href="surprise.html">&#127881; Surprise</a>
+        <!-- cards built by script.js below -->
       </div>
     </section>
   </main>
@@ -42,16 +41,16 @@
   <script>
     // Gallery captions live here — edit these with your own words.
     const CAPTIONS = {
-      2: 'My favourite smile',
-      3: 'Golden girl',
-      4: 'Princess in pink',
-      5: 'Sunshine',
-      6: 'Golden hour',
-      7: 'Forever mine'
+      1: 'My favourite smile',
+      2: 'Golden girl',
+      3: 'Princess in pink',
+      4: 'Sunshine',
+      5: 'Golden hour',
+      6: 'Forever mine'
     };
     (function buildGallery() {
       const grid = document.getElementById('grid');
-      for (let i = 2; i <= 7; i++) {
+      for (let i = 1; i <= 6; i++) {
         const item = document.createElement('div');
         item.className = 'g-item';
         const img = document.createElement('img');
@@ -66,6 +65,11 @@
         item.appendChild(cap);
         grid.appendChild(item);
       }
+      // "Add" card — placeholder for new photos
+      const add = document.createElement('div');
+      add.className = 'g-item add-card';
+      add.innerHTML = '<span class="add-icon">＋</span><span class="add-text">Add</span>';
+      grid.appendChild(add);
     })();
   </script>
   <script src="script.js"></script>
