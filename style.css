@@ -282,6 +282,36 @@ h1.title {
   line-height: 1.5;
 }
 
+/* ---------- surprise: photo with crown on it ---------- */
+.photo-with-crown {
+  position: relative;
+  display: inline-block;
+  border-radius: 24px;
+  padding: 6px;
+  background: linear-gradient(135deg, var(--pink), var(--purple), var(--pink));
+  box-shadow: 0 14px 40px rgba(224, 69, 156, 0.4);
+  animation: haloPulse 4s ease-in-out infinite;
+}
+.surprise-photo {
+  width: min(340px, 70vw);
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+  border-radius: 18px;
+}
+.crown-on-photo {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(2.4rem, 9vw, 4.2rem);
+  display: inline-block;
+  filter: drop-shadow(0 6px 12px rgba(255, 209, 102, 0.7));
+  animation: crownBob 3s ease-in-out infinite;
+  z-index: 2;
+}
+
 /* ---------- surprise ---------- */
 .surprise-wrap { position: relative; }
 .confetti-bit {
