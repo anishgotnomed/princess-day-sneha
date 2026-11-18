@@ -220,19 +220,6 @@ h1.title {
   text-align: center;
   font-size: .95rem;
 }
-.add-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  background: linear-gradient(135deg, rgba(255,180,221,.45), rgba(201,160,240,.45));
-  border: 2px dashed rgba(255,255,255,.7);
-  transition: transform .3s ease;
-}
-.add-card:hover { transform: scale(1.04) rotate(-1deg); }
-.add-card .add-icon { font-size: 2.4rem; color: var(--purple-deep); }
-.add-card .add-text { font-size: 1rem; color: var(--purple-deep); font-weight: 700; margin-top: .4rem; }
 
 /* ---------- story timeline ---------- */
 .timeline { max-width: 640px; margin: 1.5rem auto 0; position: relative; }
@@ -384,7 +371,4 @@ footer {
   .gallery-grid { gap: .7rem; }
   .g-item { max-width: 100%; }
   .g-item .cap { padding: .55rem .6rem; font-size: .82rem; }
-  .add-card { min-height: 140px; }
-  .add-card .add-icon { font-size: 2rem; }
-  .add-card .add-text { font-size: .85rem; }
 }
